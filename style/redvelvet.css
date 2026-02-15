@@ -6,20 +6,21 @@
     }
 
     body, html {
-        margin: 0; padding: 0; height: 100%;
-        font-family: 'Poppins', sans-serif;
+        margin: 0; padding: 0;
+        min-height: 100dvh; 
+        overflow-y: auto;
         background-color: var(--black);
-        color: white; overflow: hidden;
+        color: #E0E0E0;
     }
 
     .hero {
-        height: 100vh;
-        height: 100dvh;
-        display: flex; flex-direction: column;
-        justify-content: center; align-items: center;
+        min-height: 100dvh;
+        display: flex; 
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         text-align: center;
-        padding-bottom: env(safe-area-inset-bottom); 
-        padding-top: env(safe-area-inset-top);
+        padding: 60px 20px;
         box-sizing: border-box; 
         background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%),
                     url('../assets/img/bg.png') no-repeat center center/cover;
@@ -30,6 +31,7 @@
         font-family: 'Playfair Display', serif;
         font-size: 3.5rem; margin: 10px 0;
         text-transform: uppercase; letter-spacing: 3px;
+        color: white;
         text-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
     }
 
@@ -78,6 +80,34 @@
         100% { transform: scale(1); }
     }
     h1 { animation: pulse 2s infinite ease-in-out; }
+
+    .map-container {
+        margin-top: 40px;
+        width: 90%;
+        max-width: 600px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid var(--deep-red);
+        box-shadow: 0 0 15px rgba(139, 0, 0, 0.3);
+    }
+
+    .map-container h3 {
+        font-family: 'Playfair Display', serif;
+        color: var(--gold);
+        margin-top: 0;
+        text-transform: uppercase;
+    }
+
+    .map-container p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        color: #ccc;
+    }
+
+    .map-container iframe {
+        filter: grayscale(20%) invert(90%) hue-rotate(180deg) brightness(90%) contrast(90%);
+    }
 
     @media (max-height: 700px) {
     h1 {
