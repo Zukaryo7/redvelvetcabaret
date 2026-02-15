@@ -1,0 +1,76 @@
+:root {
+        --deep-red: #8b0000;
+        --bright-red: #ff0000;
+        --black: #0a0a0a;
+        --gold: #d4af37;
+    }
+
+    body, html {
+        margin: 0; padding: 0; height: 100%;
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--black);
+        color: white; overflow: hidden;
+    }
+
+    .hero {
+        height: 100vh;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+        text-align: center;
+        background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%),
+                    url('../assets/img/bg.png') no-repeat center center/cover;
+        background-color: var(--black);
+    }
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem; margin: 10px 0;
+        text-transform: uppercase; letter-spacing: 3px;
+        text-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    }
+
+    p {
+        font-style: italic; 
+        margin-bottom: 30px;
+    }
+
+    .countdown-container {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 25px;
+        border-radius: 15px;
+        border: 2px solid var(--deep-red);
+        backdrop-filter: blur(5px);
+    }
+
+    .time-segment { display: flex; flex-direction: column; min-width: 70px; }
+    .time-value { font-size: 2.2rem; font-weight: 600; color: var(--bright-red); line-height: 1; }
+    .time-label { font-size: 0.7rem; text-transform: uppercase; color: var(--gold); margin-top: 5px; }
+
+    .cta-button {
+        padding: 18px 50px;
+        font-size: 1.2rem; font-weight: bold;
+        text-transform: uppercase; color: white;
+        background-color: var(--deep-red);
+        border: 2px solid var(--gold);
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
+        cursor: pointer;
+    }
+
+    .cta-button:hover {
+        background-color: var(--bright-red);
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+    }
+    h1 { animation: pulse 2s infinite ease-in-out; }
