@@ -27,21 +27,27 @@
 
 
         // COUNTDOWN
-        const targetDate = new Date("April 02, 2026 20:00:00").getTime();
-
         function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
+            const now = new Date();
+            const target = new Date(2026, 3, 2, 20, 0, 0); // 2 Avril, 20h
 
-            if (distance < 0) {
-                document.querySelector(".countdown-container").innerHTML = "<h3>LA BILLETTERIE EST OUVERTE !</h3>";
+            let diff = target.getTime() - now.getTime();
+            const tzNow = now.getTimezoneOffset();
+            const tzTarget = target.getTimezoneOffset();
+            
+            if (tzNow !== tzTarget) {
+                diff += (tzNow - tzTarget) * 60 * 1000;
+            }
+
+            if (diff <= 0) {
+                document.querySelector(".countdown-container").innerHTML = "<h3>BILLETTERIE OUVERTE !</h3>";
                 return;
             }
 
-            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((distance % (1000 * 60)) / 1000);
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
 
             document.getElementById("days").innerText = d.toString().padStart(2, '0');
             document.getElementById("hours").innerText = h.toString().padStart(2, '0');
@@ -49,8 +55,5 @@
             document.getElementById("seconds").innerText = s.toString().padStart(2, '0');
         }
 
-
         updateCountdown();
-
-
-        const timerInterval = setInterval(updateCountdown, 1000);
+        setInterval(updateCountdown, 1000);

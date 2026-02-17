@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Velvet Cabaret | Billetterie</title>
+    <title>Red Velvet Cabaret | Informations</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/redvelvet.css">
 </head>
@@ -30,34 +30,72 @@
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <img src="assets/img/redlogo-circle-dark.png" alt="Logo" style="max-width: 200px; margin-bottom: 20px;">
-        <h1>Red Velvet Cabaret</h1>
-        <h3>Le 2 avril 2026 à 20h</h3>
 
-        <div class="countdown-container">
-            <div class="time-segment"><span id="days" class="time-value">--</span><span class="time-label">Jours</span></div>
-            <div class="time-segment"><span id="hours" class="time-value">--</span><span class="time-label">Heures</span></div>
-            <div class="time-segment"><span id="minutes" class="time-value">--</span><span class="time-label">Minutes</span></div>
-            <div class="time-segment"><span id="seconds" class="time-value">--</span><span class="time-label">Secondes</span></div>
-        </div>
+    <main class="infos-page">
+        <section class="infos-hero">
+            <h1>Informations Pratiques</h1>
+            <div class="underline"></div>
+        </section>
 
-        <a href="https://www.billetweb.fr/fr-fr" target="_blank" class="cta-button">Réserver</a>
-    
-        <div class="map-container">
-            <h3>Nous trouver</h3>
-            <p>Circus Casino Resort Namur<br>1 Avenue Baron de Moreau, 5000 Namur</p>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.484214532684!2d4.861759577239071!3d50.46002638668555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c199743b1091cb%3A0x0d31da9e76308b2e!2sCircus%20Casino%20Resort%20Namur!5e0!3m2!1sfr!2sbe!4v1707900000000!5m2!1sfr!2sbe" 
-                width="100%" 
-                height="300" 
-                style="border:0; border-radius: 15px;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+        <section class="infos-grid">
+        <div class="info-card">
+                <div class="icon">📅</div>
+                <h3>Quand ?</h3>
+                <p><strong>Jeudi 2 Avril 2026</strong></p>
+                <p>Ouverture des portes : 19h30</p>
+                <p>Début du spectacle : 20h00</p>
+            </div>
+
+            <div class="info-card location-card">
+                <div class="icon">🗺️</div>
+                <h3>Où ?</h3>
+                <p><strong>Circus Casino Resort Namur</strong></p>
+                <p>1 Avenue Baron de Moreau<br>5000 Namur, Belgique</p>
+                
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.684784196144!2d4.861783076885611!3d50.45630398684277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c199743b9291cb%3A0xd31da69e76308b2e!2sCircus%20Casino%20Resort%20Namur!5e0!3m2!1sfr!2sbe!4v1708185000000!5m2!1sfr!2sbe" 
+                        width="100%" height="200" style="border:0; border-radius: 10px;" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="icon">🎟️</div>
+                <h3>Tarifs</h3>
+                <div class="price-box">
+                    <div class="price-item">
+                        <span>Étudiants</span>
+                        <span class="price">20€</span>
+                    </div>
+                    <div class="price-item">
+                        <span>Standard</span>
+                        <span class="price">25€</span>
+                    </div>
+                </div>
+                <p class="age-limit">🔞 Réservé aux adultes (18+)</p>
+            </div>
+
+            <div class="info-card highlight">
+                <div class="icon">✨</div>
+                <h3>Dresscode</h3>
+                <p><strong>Tenue élégante exigée</strong></p>
+                <p>Plongez dans l'ambiance du cabaret en arborant votre plus belle tenue de soirée.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="icon">🍽️</div>
+                <h3>Menu & Restauration</h3>
+                <p>Le détail de notre menu sera dévoilé prochainement.</p>
+                <span class="badge">Infos à venir</span>
+            </div>
+        </section>
+
+        <div class="cta-wrapper">
+            <a href="index.html#reserver" class="cta-button">Retour à la billetterie</a>
         </div>
-    </section>
+    </main>
 
     <footer class="site-footer" id="site-footer">
         <div class="footer-content">
@@ -85,8 +123,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script src="assets/js/conf-count.js"></script>
     <script src="assets/js/header.js"></script>
 </body>
 </html>
