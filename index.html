@@ -8,19 +8,41 @@
     <link rel="stylesheet" href="style/redvelvet.css">
 </head>
 <body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="assets/img/redlogo-circle-dark.png" alt="Red Velvet Logo">
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#infos">Infos</a></li>
+                <li><a href="#programme">Programme</a></li>
+                <li><a href="#prestataires">Prestataires</a></li>
+                <li><a href="#partenaires">Partenaires</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://www.billetweb.fr/fr-fr" class="nav-cta">Réserver</a></li>
+            </ul>
+        </nav>
+    </header>
     <section class="hero">
-        <img src="assets/img/redlogo-circle.png" alt="Logo" style="max-width: 200px; margin-bottom: 20px;">
+        <img src="assets/img/redlogo-circle-dark.png" alt="Logo" style="max-width: 200px; margin-bottom: 20px;">
         <h1>Red Velvet Cabaret</h1>
-        <p>Le 2 avril 2026 à 20h</p>
+        <h3>Le 2 avril 2026 à 20h</h3>
 
         <div class="countdown-container">
-            <div class="time-segment"><span id="days" class="time-value">00</span><span class="time-label">Jours</span></div>
-            <div class="time-segment"><span id="hours" class="time-value">00</span><span class="time-label">Heures</span></div>
-            <div class="time-segment"><span id="minutes" class="time-value">00</span><span class="time-label">Minutes</span></div>
-            <div class="time-segment"><span id="seconds" class="time-value">00</span><span class="time-label">Secondes</span></div>
+            <div class="time-segment"><span id="days" class="time-value">--</span><span class="time-label">Jours</span></div>
+            <div class="time-segment"><span id="hours" class="time-value">--</span><span class="time-label">Heures</span></div>
+            <div class="time-segment"><span id="minutes" class="time-value">--</span><span class="time-label">Minutes</span></div>
+            <div class="time-segment"><span id="seconds" class="time-value">--</span><span class="time-label">Secondes</span></div>
         </div>
 
-        <a href="https://www.eventbrite.fr/e/red-velvet-cabaret-tickets-1983193562331?aff=oddtdtcreator" class="cta-button">Réserver dès maintenant !</a>
+        <a href="https://www.billetweb.fr/fr-fr" target="_blank" class="cta-button">Réserver dès maintenant !</a>
     
         <div class="map-container">
             <h3>Nous trouver</h3>
@@ -38,6 +60,7 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script src="assets/js/redvelvet.js"></script>
+    <script src="assets/js/conf-count.js"></script>
+    <script src="assets/js/header.js"></script>
 </body>
 </html>
